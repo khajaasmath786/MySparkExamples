@@ -1,0 +1,2 @@
+Asmath This is sample data
+Get the count of these words with Spark

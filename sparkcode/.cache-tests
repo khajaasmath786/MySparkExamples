@@ -1,0 +1,72 @@
+format version: 5
+output mode:
+1 items
+0 -> multiple
+output directories:
+2 items
+C:\Users\mc41946\git\MySparkExamples\sparkcode\src\test\resources -> C:\Users\mc41946\git\MySparkExamples\sparkcode\target\test-classes
+C:\Users\mc41946\git\MySparkExamples\sparkcode\src\test\scala -> C:\Users\mc41946\git\MySparkExamples\sparkcode\target\test-classes
+compile options:
+8 items
+0 -> -javabootclasspath
+1 -> C:\Program Files\Java\jre1.8.0_65\lib\resources.jar;C:\Program Files\Java\jre1.8.0_65\lib\rt.jar;C:\Program Files\Java\jre1.8.0_65\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_65\lib\jce.jar;C:\Program Files\Java\jre1.8.0_65\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_65\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\cldrdata.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\dnsns.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\jaccess.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\jfxrt.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\localedata.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\nashorn.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\sunec.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\sunmscapi.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jre1.8.0_65\lib\ext\zipfs.jar
+2 -> -javaextdirs
+3 ->  
+4 -> -bootclasspath
+5 -> C:\Users\mc41946\.m2\repository\org\scala-lang\scala-library\2.10.4\scala-library-2.10.4.jar
+6 -> -encoding
+7 -> UTF-8
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.10.6
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> false
+products:
+0 items
+binary dependencies:
+0 items
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+0 items
+used names:
+0 items
+product stamps:
+0 items
+source stamps:
+0 items
+binary stamps:
+0 items
+class names:
+0 items
+internal apis:
+0 items
+external apis:
+0 items
+source infos:
+0 items
+compilations:
+3 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABUpMoms11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAnNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAQkM6XFVzZXJzXG1jNDE5NDZcZ2l0XE15U3BhcmtFeGFtcGxlc1xzcGFya2NvZGVcdGFyZ2V0XHRlc3QtY2xhc3Nlc3QAPUM6XFVzZXJzXG1jNDE5NDZcZ2l0XE15U3BhcmtFeGFtcGxlc1xzcGFya2NvZGVcc3JjXHRlc3Rcc2NhbGFzcQB+AAV0AEJDOlxVc2Vyc1xtYzQxOTQ2XGdpdFxNeVNwYXJrRXhhbXBsZXNcc3Bhcmtjb2RlXHRhcmdldFx0ZXN0LWNsYXNzZXN0AEFDOlxVc2Vyc1xtYzQxOTQ2XGdpdFxNeVNwYXJrRXhhbXBsZXNcc3Bhcmtjb2RlXHNyY1x0ZXN0XHJlc291cmNlcw==
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABUr3biot1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAnNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAQkM6XFVzZXJzXG1jNDE5NDZcZ2l0XE15U3BhcmtFeGFtcGxlc1xzcGFya2NvZGVcdGFyZ2V0XHRlc3QtY2xhc3Nlc3QAPUM6XFVzZXJzXG1jNDE5NDZcZ2l0XE15U3BhcmtFeGFtcGxlc1xzcGFya2NvZGVcc3JjXHRlc3Rcc2NhbGFzcQB+AAV0AEJDOlxVc2Vyc1xtYzQxOTQ2XGdpdFxNeVNwYXJrRXhhbXBsZXNcc3Bhcmtjb2RlXHRhcmdldFx0ZXN0LWNsYXNzZXN0AEFDOlxVc2Vyc1xtYzQxOTQ2XGdpdFxNeVNwYXJrRXhhbXBsZXNcc3Bhcmtjb2RlXHNyY1x0ZXN0XHJlc291cmNlcw==
+2 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABUt2190V1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAnNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAQkM6XFVzZXJzXG1jNDE5NDZcZ2l0XE15U3BhcmtFeGFtcGxlc1xzcGFya2NvZGVcdGFyZ2V0XHRlc3QtY2xhc3Nlc3QAPUM6XFVzZXJzXG1jNDE5NDZcZ2l0XE15U3BhcmtFeGFtcGxlc1xzcGFya2NvZGVcc3JjXHRlc3Rcc2NhbGFzcQB+AAV0AEJDOlxVc2Vyc1xtYzQxOTQ2XGdpdFxNeVNwYXJrRXhhbXBsZXNcc3Bhcmtjb2RlXHRhcmdldFx0ZXN0LWNsYXNzZXN0AEFDOlxVc2Vyc1xtYzQxOTQ2XGdpdFxNeVNwYXJrRXhhbXBsZXNcc3Bhcmtjb2RlXHNyY1x0ZXN0XHJlc291cmNlcw==
