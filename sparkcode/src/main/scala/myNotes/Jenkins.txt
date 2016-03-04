@@ -1,0 +1,19 @@
+Jenkins --> (CI) --> contionous integrations
+
+Automatic deployment...
+-----------------------
+
+Continous Integration is devlopment pratise where developers are required to integrate code into central shared repo several times  a day.
+
+Each Checkin is verified by an automated build, allowing teams to detect problems in early stages itself.
+------------------------
+
+Download(can be done in windows, unix etc s) . Run the exe file and execute below command after installing (https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+as+a+Windows+service)
+
+java -jar jenkins.war --httpPort=1314 (default is 8080 ..in my case spark is using that so gave port manually) http://localhost:1314
+
+
+Unix has simply list of commands like wget etc..
+http://www.linuxfunda.com/2013/11/17/how-to-install-and-configure-jenkins-on-centos-6-4/
+-------------------------
+

@@ -1,0 +1,12 @@
+Mirror maker.
+
+low level 
+
+encrytption --> what kind of en in passing data
+
+decryption --->
+
+how to send data to particular brokder, consumer, 
+
+consumer and consumer group difference.
+

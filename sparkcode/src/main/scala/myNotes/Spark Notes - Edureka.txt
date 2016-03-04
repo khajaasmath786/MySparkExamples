@@ -1,0 +1,181 @@
+Questions: 
+why spark is resilent? if one machine is down, how spark is able to recover?
+what is drawback of spark when compared to hadoop?
+spark uses MR internally, can you tell us where mapper, reducer are called?
+in spark context, we give local[4], so it means job runs in 4 machines out of 100 machines? how it can handle if data is big?
+I created jar file using sbt by creating folders and src file? can you show us how to create that in eclipse or scala IDE? The reason for this question is I cannot see /main/scala folder but only able to see /main/java
+what is cascading in spark?
+do we need to set cores in spark? what is diff between local[2] and cores.
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+Spark is inMmemor processing system.It has various tools like spark SQL, MLLib, Spark Streaming, Data Frames, Blink DB etc.
+Spark SQL works on structured data.
+
+
+Map reduce Limitations : Iterative Alogorithms, Asynchronus algroithms,
+
+Hadoop MR is limited to batch processing while spark is good for both batch and real time processing.
+Itrearive --> One map reduce to another map reduce, High throughput. This is overcome in spark as all these data are stored in memmory by RDD.
+
+Spark is general DAG's (Lazy processing)  and fast data sharing.
+
+
+*************************************************************
+
+Lineage: Means sequence of operations using which variable was calculated. ( SEQUENCE )
+linesRdd= lines.flatMap(line => line.split(" "))
+
+resilient distributed dataset (RDD), which is a fault-tolerant collection of elements that can be operated on in parallel.
+
+RDD keeps tracks of lineage so if one of the machines goes down, RDD will recalcuate using the lineage when the machines comes up.
+
+if RDD is having more memory when compared to available memory, the data is not lost. It will recalucate using the lineage graph and assign appropraitely.
+
+
+
+Graceful Upgradation of Performance:
+------------------------------------
+You can save 100% of data intside memnory. you can also do 23% in memory and some other in disk and so on.
+Fully cached: Persisting data into the memory.
+Cache Disabled: Persiting data into the desk.
+
+Graceful Degradation of Performance: 
+------------------------------------
+
+Spark Architecture: 
+
+Spakr is cluster computing framework ( In Memory processing framework and not the storage framework) 
+Hadoop manages storage, process and other resource managements where as spark manages only computing and processing.
+
+
+Spark Context: (Inside the driver).  Sparkcontext is the object whcih connects to cluster manager which can be mesos, yarn or local cluster. See below to know more
+
+Cluster manager: Local Cluster Manager, Yarm cluster manager or Mesos Cluster Manager. With spark context you define the cluster manager by calling method
+val sc=new SparkConetxt(sc).setAppName("WordCount").setMaster("local[2]") --> 2 is executors (if 10 nodes, will it run in 2 nodes only?)
+
+
+WorkerNodes: Individucal machines likes data nodes in hadoop.
+
+Executor: JVM process where the multiple tasks are running.
+
+Task: Unit of work like map, filter, load etc.
+
+Cache: if we want to save the task and use it for other tasks then we call cache method on RDD.
+
+---------------------------------------------
+Installing Spark on Hadoop..
+
+You can isntall spark on hadoop cluster.
+It can be done only on Hadoop2.0
+Install spark on all data nodes.
+Increase memory of data nodes as you are using spark which is memory processing.
+
+
+-------------------------------------------------
+Spark Web UI
+
+Spark master:
+Spark Worker:
+Spark Web UI:
+-----------------------------------------------
+Run command spark-shell to open spark in scala/java context.
+
+-------------------------------------------------
+
+Submit --> Spark Submit command
+
+spark-submit --class itvarsity.class8.ReadHdfsFileAndSaveHdfs01 --master local C:\Users\mc41946\git\MySparkExamples\sparkcode\target\scala-2.10\sparkexamples_2.10-1.0.jar listofarguments
+
+We can pass these values in 3 ways but commmand line takes preference.
+
+
+--------------------------------------------------
+SBT Tool
+
+crate main/scala and simple.sbt file ---> run command sbt package, to create jar file. this gets created in target folder.
+
+---------------------------------------------------
+Spark Context: 
+
+Sparkcontext is the object whcih connects to cluster manager which can be mesos, yarn or local cluster
+It sends code/files to executors
+It sends tasks to run on executors.
+
+--------------------------------------------------
+
+Spark Common properties.....
+
+spark.executor.memory=512MB by defalut.
+spark.local.dir =/tmp --> Intermediate data to store when needed ..may be cache.
+spark.shuffle.spill=true
+spark.shuffle.memoryfraction=0.3
+spark.shuffle.compress=true
+
+when you have set the executor memory as 512MB and there is more memory required then error is thrown. By seeting spark.shuffle.spill=true, data 
+gets spilled to disk so that you overcome the memory issue error. Spill will start at the fraction defined at memoryfraction. oif 30% of memory is used in this case spilling starts.
+spill and memoryfraction should be defined together.
+
+Note: Spill regualry happens at reduce phase
+---------------------------------------------------
+Persistence in Spark
+using cache transformation..
+
+MemoryOnly
+DiskOnly
+MemoryandDisk
+
+
+-----------------------------------------------------------
+
+create SBT project in local directory.
+
+after that run sbt eclipse, this will create bin and extra folders.
+after that import --> class6 @102.16
+
+Not that matured directly from eclipse
+------------------------------------------------------------
+
+Cloudera
+http://localhost:18080/
+http://localhost:18081/
+
+------------------------------------------------------------
+
+SPARK STREAMING EXAMPLE
+
+Streaming context --> 
+
+Dstream --> Streams of data --> sequence of RDD's
+
+command: nc -lk 9999 
+
+
+
+we can restrict only on time dimension in spark streaming but not the batch size.
+
+
+Rolling Window Examples: reduceBykeyWindow: You will process both the batches .. current batch and previous batches.. ex: batch size 15 sec, and window is 45 sec.. Then it will take current bacth+last2
+** REq: Rolling window should be multiple of batch window.
+
+
+You can kill the stream in eclipse by clicking on red. have to see how you can do it in cluster? My assumption is through the webUI or Matser.
+
+
+
+
+------------------------------------------------------------
+FAULT TOLERANCE IN SPARK: 
+
+Checkpointing: Need to setup for fault tolerance. It saves data periodically in HDFS or S3 etc. If driver failes, it can be restarted using the check points. 
+This is called metadata checkpoiting. 
+
+
+ssc.checkpoint("hdfs://")
+

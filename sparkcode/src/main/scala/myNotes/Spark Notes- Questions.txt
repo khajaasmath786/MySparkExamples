@@ -1,0 +1,23 @@
+** If memory is full, Spark starts spilling data into the local disk so that's how it over memory issues.
+spark.shuffle.spill=true
+spark.shuffle.spill.compress=true
+spark.shuffle.memoryfraction=0.3 after 0.3, then it starts spilling.
+spark.speculative.execution=false or true
+
+** default partitions are created for any RDDIf I dont specify it explicitly : Ans 1.
+More information: https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/performance_optimization/how_many_partitions_does_an_rdd_have.html
+
+** if there is 1 GB of data, how many RDD's are created? Is it block size number of RDD's or only one RDD? Only one RDD but it is partitioned by Spark.. Defualt partitions or number of partitons you provvided
+
+** is the data replicated in spark like hadoop while processing? No. Spark is capable enough to pull the computation cycle by lineage and loads the data if anything goes worng so it is not repicated.
+
+** What is DAG? 
+
+** what is cores?
+
+** spark-defulats.conf is the place where you can change the master etc.
+
+** RDD partitions ..> 100 workers, you have to decide how many partitions you want to create , it can be only 4 or any value. By default it can create 
+
+
+
