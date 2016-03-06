@@ -13,6 +13,7 @@ import StreamingContext._
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.io.{IntWritable, Writable, Text}
 import org.apache.spark.storage.StorageLevel
+import org.apache.log4j.{Level,Logger}
 
 
 object WordCountStreaming {
@@ -64,6 +65,15 @@ object WordCountStreaming {
     //always check API http://spark.apache.org/docs/latest/api/scala/index.html#package  2. Socket use nc -lk 9999 3. Go through slides of eudreka, see persistence mechanism also here
     // Scala API also http://www.scala-lang.org/api/current/index.html#package
     
+    println("Install NC in centos using the command sudo yum install nc")
+    println("sbin/start-masters.sh and sbin/start-slaves.sh not slave.sh")
+    println("spark-submit --class edureka.streaming.WordCountStreaming --master spark://localhost.localdomain:7077 /home/edurekadaasspark.jar")
+    
+    println("-------------- SETTING LOGGER TO ERROR-------------------------------------")
+    val rootLogger=Logger.getRootLogger;
+    rootLogger.setLevel(Level.ERROR)
+    println("---------------------------------------------------")
+    
     val ssc = new StreamingContext(sparkConf, Seconds(15))
 
     val lineRdd = ssc.socketTextStream(host, portNumber,StorageLevel.MEMORY_AND_DISK_SER); // You can get these details in Programming guide by searching as Context. See Muthu Video
@@ -88,7 +98,8 @@ object WordCountStreaming {
 
     /*    
     
-    //ClouderaVM --> spark-submit --class itvarsity.class8.ReadHdfsFileAndSaveHdfs01 --master local sparkexamples_2.10-1.0.jar
+    //EdurekaVM --> spark-submit --class edureka.streaming.WordCountStreaming --master spark://localhost.localdomain:7077 /home/edurekadaasspark.jar
+     * 
     
     //Windows -> spark-submit --class itvarsity.class8.WriteObjectFile --master local C:\Users\mc41946\git\MySparkExamples\sparkcode\target\scala-2.10\sparkexamples_2.10-1.0.jar
      * spark-submit --class itvarsity.class8.ReadHdfsFileAndSaveHdfs01 --master local C:\Users\mc41946\git\MySparkExamples\sparkcode\target\scala-2.10\sparkexamples_2.10-1.0.jar
