@@ -1,5 +1,5 @@
 
-name := "Movie Recommendation New"
+name := "MySparkExamples"
  
 version := "1.0"
  
