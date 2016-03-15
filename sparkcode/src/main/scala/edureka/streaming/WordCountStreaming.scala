@@ -98,7 +98,7 @@ object WordCountStreaming {
 
     /*    
     
-    //EdurekaVM --> spark-submit --class edureka.streaming.WordCountStreaming --master spark://localhost.localdomain:7077 /home/edurekadaasspark.jar
+    //EdurekaVM -->  spark-submit --class edureka.streaming.WordCountStreaming --master spark://localhost.localdomain:7077 /home/edureka/daasspark.jar /user/edureka /user/edureka/out streaming spark://localhost.localdomain:7077
      * 
     
     //Windows -> spark-submit --class itvarsity.class8.WriteObjectFile --master local C:\Users\mc41946\git\MySparkExamples\sparkcode\target\scala-2.10\sparkexamples_2.10-1.0.jar
